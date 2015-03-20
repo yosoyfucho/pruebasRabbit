@@ -94,7 +94,7 @@ public class LogicaRabbit {
 
       QueueingConsumer.Delivery delivery = consumer.nextDelivery();
       message = new String (delivery.getBody());
-      cierreTot(conn,canal);
+      //cierreTot(conn,canal);
 
     }
     catch (Exception e)
