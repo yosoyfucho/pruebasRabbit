@@ -94,6 +94,7 @@ public class LogicaRabbit {
 
       QueueingConsumer.Delivery delivery = consumer.nextDelivery();
       message = new String (delivery.getBody());
+      cierreTot(conn,canal);
 
     }
     catch (Exception e)
@@ -105,21 +106,5 @@ public class LogicaRabbit {
     return message;
   }
 
-  // public static void main(String[] argv) throws Exception {
-  //
-  //
-  //   ConnectionFactory factory = new ConnectionFactory();
-  //   factory.setHost("localhost");
-  //   Connection connection = factory.newConnection();
-  //   Channel channel = connection.createChannel();
-  //   public final static String QUEUE_NAME = "qRabbitMQ";
-  //
-  //   channel.queueDeclare(QUEUE_NAME, false, false, false, null);
-  //   String message = "Hello World!";
-  //   channel.basicPublish("", QUEUE_NAME, null, message.getBytes());
-  //   System.out.println(" [x] Sent '" + message + "'");
-  //
-  //   channel.close();
-  //   connection.close();
-  // }
+
 }
