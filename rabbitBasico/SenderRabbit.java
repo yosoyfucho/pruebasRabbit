@@ -4,6 +4,22 @@ import com.rabbitmq.client.Channel;
 import java.text.ParseException;
 import java.io.*;
 
+/*
+Programa que envía a la cola de RabbitMQ
+o bien cadenas de texto introducidos en la llamada
+o un mensaje generico si no hay cadena introducida
+
+compilacion
+
+javac -cp "./lib/rabbitmq-client.jar" SenderRabbit.java
+
+ejecucion
+
+java -cp "./lib/commons-io-1.2.jar:./lib/commons-cli-1.1.jar:./lib/rabbitmq-client.jar:." SenderRabbit
+
+
+*/
+
 
 public class SenderRabbit
 {
@@ -32,9 +48,6 @@ public class SenderRabbit
           auxiliar = args[i];
         else
           {
-            if(i<cont -1)
-              auxiliar = auxiliar + " " + args[i];
-            else
               auxiliar = auxiliar + " " + args[i];
           }
       }

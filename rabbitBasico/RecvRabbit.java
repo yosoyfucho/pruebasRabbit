@@ -4,6 +4,22 @@ import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.QueueingConsumer;
 import java.io.*;
 
+/*
+Programa que recibe mensajes de la cola de RabbitMQ
+QUEUE_NAME
+
+compilacion
+
+javac -cp "./lib/rabbitmq-client.jar" RecvRabbit.java
+
+ejecucion
+
+java -cp "./lib/commons-io-1.2.jar:./lib/commons-cli-1.1.jar:./lib/rabbitmq-client.jar:." RecvRabbit
+
+Actualmente falla al recibir en bucle, por solucionar
+
+
+*/
 
 public class RecvRabbit {
 

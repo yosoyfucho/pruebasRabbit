@@ -5,6 +5,12 @@ import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.Channel;
 import java.io.*;
 
+/*
+Logica para la utilización de rabbitMQ.
+Crea conexiones y canales, realiza el envio al buzon QUEUE_NAME
+y recoge mensajes existentes en el.
+
+*/
 
 
 public class LogicaRabbit {
