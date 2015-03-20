@@ -49,8 +49,8 @@ public class LogicaRabbit {
   {
     try
     {
-      conn.close();
       canal.close();
+      conn.close();
     }
     catch (Exception e)
     {
@@ -69,6 +69,9 @@ public class LogicaRabbit {
       canal.basicPublish("",QUEUE_NAME,null,msg.getBytes());
       System.out.println("LogicaRabbit=> Mensaje Enviado");
       cierreTot(conn,canal);
+      // canal.close();
+      //
+      // conn.close();
     }
     catch (Exception e)
     {

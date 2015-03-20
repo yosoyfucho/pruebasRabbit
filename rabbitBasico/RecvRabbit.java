@@ -13,7 +13,7 @@ public class RecvRabbit {
       LogicaRabbit aux = new LogicaRabbit();
       Connection conn = aux.connection();
       Channel canal = aux.canal(conn);
-
+      System.out.println("Esperando a que lleguen mensajes");
     while (true) {
       message = aux.RecvFromRabbit(canal,conn);
       System.out.println(" [x] Received '" + message + "'");
