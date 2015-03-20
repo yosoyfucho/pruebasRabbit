@@ -1,4 +1,3 @@
-//package rabbit;
 
 import com.rabbitmq.client.ConnectionFactory;
 import com.rabbitmq.client.QueueingConsumer;
@@ -7,7 +6,6 @@ import com.rabbitmq.client.Channel;
 import java.io.*;
 
 
-// package rabbit;
 
 public class LogicaRabbit {
 

@@ -1,11 +1,9 @@
-//package rabbit;
 import com.rabbitmq.client.ConnectionFactory;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.Channel;
 import java.text.ParseException;
 import java.io.*;
 
-// package rabbit;
 
 public class SenderRabbit
 {
