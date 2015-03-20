@@ -29,11 +29,11 @@ public class SenderRabbit
       for (int i = 0; i<cont; i++)
       {
         if (i == 0)
-          auxiliar = args[i] + "_";
+          auxiliar = args[i];
         else
           {
             if(i<cont -1)
-              auxiliar = auxiliar + " " + args[i] + " ";
+              auxiliar = auxiliar + " " + args[i];
             else
               auxiliar = auxiliar + " " + args[i];
           }
