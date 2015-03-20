@@ -1,0 +1,12 @@
+compilar clases
+
+javac -cp "./lib/rabbitmq-client.jar" *.java
+
+Ejecutar Send
+
+java -cp "./lib/commons-io-1.2.jar:./lib/commons-cli-1..1.jar:./lib/rabbitmq-client.jar:." SenderRabbit
+
+Ejecutar Recv
+
+java -cp "./lib/commons-io-1.2.jar:./lib/commons-cli-1..1.jar:./lib/rabbitmq-client.jar:." RecvRabbit
+
