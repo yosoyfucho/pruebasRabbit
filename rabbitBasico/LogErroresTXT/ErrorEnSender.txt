@@ -1,0 +1,14 @@
+MacBook-Pro:pruebasRabbit fucho$ java -cp "./lib/commons-io-1.2.jar:./lib/commons-cli-1..1.jar:./lib/rabbitmq-client.jar:." SenderRabbit
+Enviando mensaje a través de Rabbit
+LogicaRabbit=> Mensaje Enviado
+Fallo al cerrar la conexión y el canal
+
+trace: com.rabbitmq.client.AlreadyClosedException: connection is already closed due to clean connection shutdown; protocol method: #method<connection.close>(reply-code=200, reply-text=OK, class-id=0, method-id=0)
+	at com.rabbitmq.client.impl.AMQChannel.processShutdownSignal(AMQChannel.java:270)
+	at com.rabbitmq.client.impl.ChannelN.startProcessShutdownSignal(ChannelN.java:261)
+	at com.rabbitmq.client.impl.ChannelN.close(ChannelN.java:566)
+	at com.rabbitmq.client.impl.ChannelN.close(ChannelN.java:505)
+	at com.rabbitmq.client.impl.ChannelN.close(ChannelN.java:498)
+	at LogicaRabbit.cierreTot(LogicaRabbit.java:55)
+	at LogicaRabbit.SendToRabbit(LogicaRabbit.java:73)
+	at SenderRabbit.main(SenderRabbit.java:24)
