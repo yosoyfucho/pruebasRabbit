@@ -45,14 +45,14 @@ public class Recv2 {
       switch (aux)
       {
         case '0':
-        System.out.println("Mensaje por defecto");
-        break;
+          System.out.println("Mensaje por defecto");
+          break;
         case '1':
-        System.out.println("Mensaje explicito en la llamada");
-        break;
+          System.out.println("Mensaje explicito en la llamada");
+          break;
         default:
-        System.out.println("Fallo");
-        break;
+          System.out.println("Fallo");
+          break;
       }
       System.out.println(" [x] Received '" + message + "'");
     }
