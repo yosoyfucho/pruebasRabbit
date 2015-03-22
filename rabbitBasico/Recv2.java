@@ -6,6 +6,8 @@ import com.rabbitmq.client.QueueingConsumer;
 
 /*
 NO HACE USO DE LOGICARABBIT
+Distingue mensajes que empiecen por 0 o 1
+introducidos por Sender
 
 compilacion
 

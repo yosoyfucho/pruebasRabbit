@@ -9,6 +9,9 @@ Programa que envía a la cola de RabbitMQ
 o bien cadenas de texto introducidos en la llamada
 o un mensaje generico si no hay cadena introducida
 
+Añadimos un flag al principio del mensaje enviado que despues
+sera evaluado por el receptor
+
 compilacion
 
 javac -cp "./lib/rabbitmq-client.jar" SenderRabbit.java
