@@ -25,17 +25,18 @@ public class SenderRabbit
 {
   public static void main (String args[]) throws Exception
   {
-    LogicaRabbit aux = new LogicaRabbit();
-    Connection conn = aux.connection();
-    Channel canal = aux.canal(conn);
+    LogicaRabbit auxRabbit = new LogicaRabbit();
+    Connection connRabbit = auxRabbit.connection();
+    Channel canalRabbit = auxRabbit.canal(connRabbit);
     String message = null;
 
 
     if (args.length < 1)
     {
       message = "No hay mensaje en la llamada";
+      message = "0"+" "+message;
       System.out.println("Enviando mensaje a través de Rabbit : "+ message);
-      aux.SendToRabbit(canal,message,conn);
+      auxRabbit.SendToRabbit(canalRabbit,message,connRabbit);
     }
 
     else
@@ -53,22 +54,13 @@ public class SenderRabbit
       }
       if (auxiliar!=null)
       {
+      auxiliar = "1" + " "+ auxiliar;
       System.out.println("Enviando mensaje a través de Rabbit : "+ auxiliar);
-      aux.SendToRabbit(canal,auxiliar,conn);
+      auxRabbit.SendToRabbit(canalRabbit,auxiliar,connRabbit);
       }
       else
         System.out.println("Se ha producido un error al enviar auxiliar");
-    }
+      }
 
-    // }
-    // else
-    // {
-    //
-    //   for (int i = 0; i<argv.length();i++)
-    //   {
-    //     System.out.println("Enviando mensaje a través de Rabbit");
-    //     aux.SendToRabbit(canal,argv[i],conn);
-    //   }
-    // }
   }
 }
